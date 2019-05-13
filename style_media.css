@@ -1,0 +1,57 @@
+/* 
+@media only screen and (min-width:1024px){
+.port1,
+.port2,
+.port3{
+    text-align: center;
+    display:block;
+    width:33%;
+    float:left;
+
+} .port1{
+    float:left;
+}
+
+.port2,
+.port3{
+    float:right;
+} 
+.port4,
+.port5,
+.port6{
+    text-align: center;
+    /* display:inline-block; */
+    /* width:33%;
+    float:left;
+
+}
+ .port4{
+    float:left;
+}
+
+.port5,
+.port6{
+    float:right;
+} 
+ .portfolio img{
+    width:85%;
+} 
+.float1:after,
+.float2:after{
+            content:" ";
+            clear:both;
+            display:table;
+}
+
+.title{
+    text-align: center;
+    text-transform:uppercase;
+}
+
+.portfolio p,
+.portfolio h2{
+
+    margin-left:10%;
+    margin-right:10%;
+}
+}  */ 
