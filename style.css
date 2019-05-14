@@ -4,6 +4,7 @@
 body{
     background:#F3F0F0;
 }
+
  h1{
 
     text-transform: uppercase;
@@ -14,10 +15,11 @@ ul{
     text-align: center;
     
 }
-li{
+
+nav li{
     
     list-style-type:none;
-    font-size:2em;
+    font-size:1em;
     text-transform: uppercase;
     margin-bottom:5px;
     background:white; 
@@ -32,29 +34,28 @@ nav ul{
     margin:auto;
     /* border:4px solid black; */
 }
-ul li a{
+nav li a{
+    
     text-decoration:none;
     color:black;
     font-weight:bold;
-    width:90%;
+  
     text-align:center;
     /* display:inline-block; */
     /* background:red; */   
 }
-
+/* For centering the image */
 .profile_image{
     display:block;
     margin:0 auto;
+    margin-bottom:50px;
 }
-.portfolio img{
-    display:inline-block;
-    margin:0 auto;
-    
-}
+
 header{
     width:100%;
-    margin:auto;
+    /* margin:auto; */
     /* border:4px solid black; */
+    margin-bottom:20px;
 }
 .intro{
     width:90%;
@@ -65,19 +66,13 @@ header{
     text-justify: justify;
     text-align: center;
 }
- 
+ /* centering the images for sample portfolio */
 .portfolio img{
     display:block;
     width:90%;
     margin:auto;
 }
- .profile-image{
-     display:block;
-     min-width:100%;
-     margin:0 auto;
-     margin-bottom:20px;
      
- }
  .title{
      text-align:center;
      text-transform: uppercase;
@@ -88,16 +83,10 @@ header{
  .portfolio p{
      text-align:center;
  }
+ .portfolio h2{
+     text-shadow: 2px 2px 2px lightblue;
+ }
  
-nav {
-    display:block;
-    width:100%;
-    /* border:4px solid blue; */
-    margin: auto;
-    padding:0 40px;
-
-
-}
 
 .main-content{
     /* border: 4px solid green; */
@@ -108,31 +97,143 @@ nav {
 .lower_content{
     text-align: center;
     /* border:4px solid orange; */
-}
-
-footer p,
-footer a
-{
-    display:inline-block;
-    text-transform:uppercase;
-    text-decoration:none;
-    font-weight:bold;
-    color:black;
-   
-}
-footer p{
-    margin-left:10px;
+    border-bottom:1px solid black;
 }
 footer a{
-    margin-left:50%;
+   margin-left:30%;
+    text-decoration:none;
+    color:black;
+}
+footer span{
+    margin-left:30px;
+}
+footer{
+    font-weight:bolder;
+    font-size:20px;
+}
+
+@media(min-width:768px){
+    body{
+        background:red;
+    }
+    
+    .intro .profile_image{
+        width:32%;
+    }
+    .intro p{
+        width:62%;
+    }
+    .intro p{
+        float:left;
+        line-height:1.5;
+        
+    }
+    .intro .profile_image{
+        float:right;
+    }
+    .intro:after{
+        content:"";
+        clear:both;
+        display:table;
+    }
+    .port1,
+    .port2{
+        width:46.5%;
+    }
+
+    .port1{
+        float:left;
+    }
+    .port2{
+        float:right;
+    }
+    .port3,
+    .port4{
+        width:46.5%;
+    }
+    .port3{
+        float:left;
+    }
+    .port4{
+        float:right;
+    }
+    .port5,
+    .port6{
+        width:46.5%;
+    }
+    .port5{
+        float:left;
+    }
+    .port6{
+        float:right;
+    }
+    .main-content:after{
+        content:"";
+        clear:both;
+        display:table;
+    }
+}
+@media(min-width:1024px){
+   body{
+       background:lightblue;
+   }
+   
+   .port1,
+   .port2,
+   .port3{
+       width:32.5%;
+   }
+   .port1{
+       float:left;
+   }
+   .port2,
+   .port3{
+       float:right;
+   }
+   .port4,
+   .port5,
+   .port6{
+       width:32.5%;
+   }
+   .port4{
+       float:left;
+   }
+   .port5,
+   .port6{
+       float:right;
+   }
+   .main-content:after{
+    content:"";
+    clear:both;
+    display:table;
+}
+header h1,
+nav,
+nav li,
+nav ul{
+    display:inline;
+}
+nav ul{
+    margin:750px;
+}
+nav li {
+    background:none;
+    margin-right:10px;
+} 
+header{
+    display:block;
+    margin-bottom:50px;
+}
+
+
+
+    
+
 
 }
 
 
 
 
-.portfolio h2{
-    text-shadow: 2px 2px 2px lightblue;
-}
 
  
