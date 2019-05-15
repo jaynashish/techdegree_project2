@@ -1,239 +1,124 @@
 *{
     box-sizing: border-box;
 }
-body{
-    background:#F3F0F0;
-}
+/* Starting with the `*` (universal selector) element we will apply the `box-sizing` property, so that *all* elements inherit it. This is something I would recommend adding to all of your projects. */
+/* > If you set box-sizing: border-box; on an element, the padding and border are included in the width and height. */
 
- h1{
+html, body {
+    height: 100%;
+  }
+  /* For this code pen example we will set the `html` and `body` elements to `height: 100%;`. 
+  This is required for future use of `position: 
+  absolute;` that we will be adding to the `footer`. This is so that it
+   will stick to the bottom of the browser window. As both elements 
+   share the same rule of `height: 100%;` we group the 
+   selectors together separated by a comma. (edited)  */
 
-    text-transform: uppercase;
-    text-align:center;
-    text-shadow: 1px 2px 0 lightblue;
-}
-ul{
-    text-align: center;
-    
-}
+   body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    background-color: #093145;
+  }
 
-nav li{
-    
-    list-style-type:none;
-    font-size:1em;
-    text-transform: uppercase;
-    margin-bottom:5px;
-    background:white; 
-    width:100%;
-    /* width:1300px; */
-    
-    /* display:inline-block; */
-   
-}
-nav ul{
-    width:90%;
-    margin:auto;
-    /* border:4px solid black; */
-}
-nav li a{
-    
-    text-decoration:none;
-    color:black;
-    font-weight:bold;
-  
-    text-align:center;
-    /* display:inline-block; */
-    /* background:red; */   
-}
-/* For centering the image */
-.profile_image{
-    display:block;
-    margin:0 auto;
-    margin-bottom:50px;
-}
+  /* For the `body` element we remove the `margin` that browsers add by default,
+   by setting it to `0`. Then set our default typography rules for the page 
+   by utilizing the Google Font Roboto that we previously imported in the head
+    of the index.html. We also set the default font color and add 
+    a background color. */
 
-header{
-    width:100%;
-    /* margin:auto; */
-    /* border:4px solid black; */
-    margin-bottom:20px;
-}
-.intro{
-    width:90%;
-    margin:auto;
-    /* border: 4px solid red; */
-}
-.intro p{
-    text-justify: justify;
-    text-align: center;
-}
- /* centering the images for sample portfolio */
-.portfolio img{
-    display:block;
-    width:90%;
-    margin:auto;
-}
-     
- .title{
-     text-align:center;
-     text-transform: uppercase;
-     font-size:32px;
-     
- }
- .portfolio h2,
- .portfolio p{
-     text-align:center;
- }
- .portfolio h2{
-     text-shadow: 2px 2px 2px lightblue;
- }
- 
+    ul {
+        list-style: none;
+        padding-left: 0;
+      }
+      /* For the `ul` we remove the default bullet points by setting `list-style` 
+      to `none` and the default list left indentation that is added as left 
+      padding by the browser, by setting it to `0`.  This is something 
+      I would recommend adding to every project that uses a list. */
 
-.main-content{
-    /* border: 4px solid green; */
-    width:90%;
-    margin:auto;
-}
+      a {
+        text-decoration: none;
+        color: white;
+        text-transform: uppercase;
+        line-height: 1.38em;
+      }
+      /* Lastly on the `a` element we remove the default underline that 
+      the browsers apply to links, set the text to appear in all caps to 
+      match the mockups, set the color to white, and normalize the 
+      line-height for cross browser uniformity. */
 
-.lower_content{
-    text-align: center;
-    /* border:4px solid orange; */
-    border-bottom:1px solid black;
-}
-footer a{
-   margin-left:30%;
-    text-decoration:none;
-    color:black;
-}
-footer span{
-    margin-left:30px;
-}
-footer{
-    font-weight:bolder;
-    font-size:20px;
-}
+      footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 100px;
+        padding: 20px;
+        background-color: #107896;
+      }
 
-@media(min-width:768px){
-    body{
-        background:red;
-    }
-    
-    .intro .profile_image{
-        width:32%;
-    }
-    .intro p{
-        width:62%;
-    }
-    .intro p{
-        float:left;
-        line-height:1.5;
-        
-    }
-    .intro .profile_image{
-        float:right;
-    }
-    .intro:after{
-        content:"";
-        clear:both;
-        display:table;
-    }
-    .port1,
-    .port2{
-        width:46.5%;
-    }
+      /* Next, we add the rules for the `footer` element. First we set 
+      `position: absolute` and `bottom: 0;` to stick the footer to the bottom 
+      of the page, for this code pen example. By default when using
+       `position: absolute;` the width is set to that of the content. 
+       So we also add `width: 100%;` here so that the footer spans 
+       the full width of the page. Then we set we give it a fixed height,
+        background color, and padding for general styling purposes. */
 
-    .port1{
-        float:left;
-    }
-    .port2{
-        float:right;
-    }
-    .port3,
-    .port4{
-        width:46.5%;
-    }
-    .port3{
-        float:left;
-    }
-    .port4{
-        float:right;
-    }
-    .port5,
-    .port6{
-        width:46.5%;
-    }
-    .port5{
-        float:left;
-    }
-    .port6{
-        float:right;
-    }
-    .main-content:after{
-        content:"";
-        clear:both;
-        display:table;
-    }
-}
-@media(min-width:1024px){
-   body{
-       background:lightblue;
-   }
-   
-   .port1,
-   .port2,
-   .port3{
-       width:32.5%;
-   }
-   .port1{
-       float:left;
-   }
-   .port2,
-   .port3{
-       float:right;
-   }
-   .port4,
-   .port5,
-   .port6{
-       width:32.5%;
-   }
-   .port4{
-       float:left;
-   }
-   .port5,
-   .port6{
-       float:right;
-   }
-   .main-content:after{
-    content:"";
-    clear:both;
-    display:table;
-}
-header h1,
-nav,
-nav li,
-nav ul{
-    display:inline;
-}
-nav ul{
-    margin:750px;
-}
-nav li {
-    background:none;
-    margin-right:10px;
-} 
-header{
-    display:block;
-    margin-bottom:50px;
-}
+        h2 {
+            float: left;
+            height: 12px;
+            line-height: 12px;
+          }
+          
+          .footer-nav {
+            text-align: right;
+          }
+          
+          li {
+            display: inline-block;
+            margin-right: 20px;
+          }
+/* Next we will setup the rules to layout the `h2` and `ul` nav items
+onto the same line. As the `<h2>` appears before the 
+`<ul class="footer-nav">` in the HTML, we will want to float it to
+the left so that the `ul` can move up to the same row as it. 
+Next we set the `height` and `line-height` to equal pixel values 
+to vertically align them within the `footer` element. 
+Next we set `text-align: right;` on the `ul` so that the navigation 
+items move to the right hand side of the browser. Finally, 
+we set the `li` to `display: inline-block;` so that the navigation 
+items go into a row format instead of the default column format. 
+Then, add `margin-right: 20px` to separate the navigation items. */
 
+            .top, .footer-nav li:last-child {
+                margin-right: 0;
+              }
 
+/* So that the last item in the full navigation and the solo
+“back to top” link sit flush against the right hand side of the 
+footer element, we remove the `margin-right` from those two
+items that we added previously. The selector `li:last-child` 
+targets the last `li` element inside `footer-nav` unordered list */
 
-    
+                .full {
+                    display: none;
+                  }
 
+/* The last piece of our `mobile-first` (for screen sizes `767px` 
+and below) code is to hide the *full* navigation menu on 
+the *mobile view*. This is achieved by setting it to 
+`display: none;`. */
 
-}
-
-
-
-
-
- 
+                  @media (min-width: 768px) {
+                    .top {
+                      display: none;
+                    }
+                    .full {
+                      display: inline-block;
+                    }
+                  }
+                  
+/* To finish things off we build out the `min-width: 768px`
+media query. First we hide *“back to top”* so it does not 
+appear on screen sizes 768px and above.  Then we display the 
+full navigation instead. (edited)  */

@@ -3,25 +3,45 @@
 *{
     box-sizing:border-box;
 }
-
+html, body {
+    height: 100%;
+  }
  body{
     background:#F3F0F0;
 }
+header{
+    background:lightblue;
+    padding:1em 0;
+    margin:auto;
+    width:100%;
+   
+    
+}
 nav ul{
     text-align:center;
+    
 }
 
 nav li{
     list-style-type:none;
     background:white;
+    margin-right:40px;
+    
 }
 nav a{
     text-decoration:none;
     text-transform:uppercase;
     color:black;
     display:block;
-    margin-bottom:5px;
-    
+    margin-bottom:5px;    
+}
+.start{
+   max-width:90%;
+   padding:20px;
+   display:block;
+    margin:0 auto;
+    /* border:2px solid blue; */
+    text-align:center;
 }
 .title{
     text-align:center;
@@ -31,60 +51,81 @@ nav a{
 .profile_image{
     display:block;
     margin:auto;
+    max-width:90%;
+    box-shadow:  4px 4px 20px 4px lightblue;
 }
-footer span{
-    color:black;
-    text-transform:uppercase;
-}
+/* THE FOOTER IN OFFICE HOURS */
+footer {
+    position: absolute;
+    /* when I comment out position:absolute the footer disappers */
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    padding: 20px;
+    background-color: #107896;
+  }
+  footer h2 {
+    float: left;
+    height: 12px;
+    line-height: 12px;
+  }
+  .footer-nav{
+      text-align:right;
+  }
+  .footer-nav li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  .top, .footer-nav li:last-child {
+    margin-right: 0;
+  }
+  .full {
+    display: none;
+    /* I tried this also but .full items were unaffected */
+  }
+
 footer a{
-    color:black;
-    text-transform:uppercase;
+    text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  line-height: 1.38em;
+    
+}
+footer ul{
+    list-style:none;
+    padding-left:0;
 }
 
 header h1{
     text-transform: uppercase;
     text-align:center;
-}
-header h1::after{
-    content:" ";
-    display:inline-block;
-    height:20px;
-    width:20px;
-    background:grey;
-    border-radius:50%;
-    margin-left:10px;
-}
-header h1::before{
-    content:" ";
-    display:inline-block;
-    height:20px;
-    width:20px;
-    background:grey;
-    border-radius:50%;
-    margin-right:10px;
-}
+    text-shadow: -0.5px 0 blue, 0 0.5px blue, 0.5px 0 blue, 0 -0.5px blue;
+   
+ }
+
+
 .portfolio h2{
     text-transform:uppercase;
     text-align:center;
 }
 .portfolio p{
     text-align:center;
+   
 }
 .portfolio img{
  display:block;
  max-width:80%;
  margin:auto;
 }
+
 .main-content h2{
     text-transform:uppercase;
    
 } 
-.main-content{
-    padding-left:5%;
-    padding-right:5%;
-}
+
+
 footer span{
-    float:left
+    float:left;
 }
 footer a{
     float:right;
@@ -94,10 +135,10 @@ footer::after{
     content: " ";
     clear:both;
     display:table;
-}
+} 
 .portfolio img{
     display:block;
-    width:80%;
+    max-width:80%;
     margin:auto;
 }
 .lower-content h2{
@@ -110,160 +151,136 @@ footer::after{
     
 }
 
+
 /* MEDIA QUERIES */
-@media (min-width:769px){
-    
-    nav li{
+
+@media (min-width:769px) {
+    .large_nav li{
         display:inline-block;
-        margin-right:25px;
+        margin-left:20px;
     }
-    footer span,
-    footer a{
-        display:none;
+    .large_nav ul{
+        margin-left:40px;
     }
-    .intro img{
-        display:block;
-        width:38%;
+    .large_nav{
+        width: 65%;
         float:right;
-    }
-    .intro p{
-        width:56%;
-        float:left;
-        line-height:1.5;
+   }
+   .large_h1{
+       width:30%;
+       float:left;
+   }
+   .intro img{
+       width:35%;
+       float: right;
+   }
+   .intro p{
+       width:58%;
+       float:left;
+       text-align:justify;
 
+   }
+    .portfolio{
+        width:46%;
+        float: left;
+        padding:1%;
     }
-    .intro::after{
-        content:" ";
-        clear:both;
-        display:table;
-    }
-    .portfolio img{
-        display:block;
-        width:300px;
+   
+    .intro{
         margin:auto;
+        width:90%;
     }
-    .port1,
-    .port2{
-       
-        width:46.5%;
-    }
-    .port1{
-        float:left;
-    }
-    .port2{
-        float:right;
-    }
-    .port3,
-    .port4{
-       
-        width:46.5%;
-    }
-    .port3{
-        float:left;
-    }
-    .port4{
-        float:right;
-    }
-    .port5,
-    .port6{
-       
-        width:46.5%;
-    }
-    .port5{
-        float:left;
-    }
-    .port6{
-        float:right;
-    }
-    .portfolio::after{
+
+    
+    
+    /* CLEARFIX FOR MEDIA QUERY */
+    .clearfix::after{
         content:" ";
         clear:both;
         display:table;
-    }
-    .foot_big h2{
-        float:left;
-    }
-    .foot_nav{
-        float:right;
-    }
-    .foot_big::after{
-        content:" ";
-        clear:both;
-        display:table;
-    }
-}
+    } 
+    /* footer{
+        display:none;
+    } */
+
+
+
+@media(min-width:1024px){
+ 
+    
+     .start{
+         padding:0;
+     }
+     
+     .portfolio{
+         width:30%;
+         margin:auto;
+         float:left;
+         padding:1%;
+         margin:1%;    
+     }
+     
     
 
-/* for large screen navigation */
 
-
-@media (min-width:1024px){
-header h1{
-    float:left;
-    margin-left:60px;
-
-}
-
-nav ul{
-    float:right;
-}
-header:after{
-content:" ";
-clear:both;
-display:table;
-}
-nav li{
-    display:inline-block;
-    margin:8px;
-} 
- .portfolio img{
-     display:block;
-     width:250px;
- }
- .port1,
- .port2,
- .port3{
-     width:32%;
- }
- .port1{
-     float:left;
- }
- .port1,
- .port2{
-     float:right;
- }
- .port4,
- .port5,
- .port6{
-     width:32%;
- }
- .port4{
-     float:left;
- }
- .port5,
- .port6{
-     float:right;
- }
- .portfolio::after{
-     content:" ";
-     clear:both;
-     display:table;
- }
- 
- .foot_big h2{
-    float:left;
-}
-.foot_nav{
-    float:right;
-}
-.foot_big::after{
-    content:" ";
-    clear:both;
-    display:table;
-}
-}
-@media (max-width:768px){
-    .foot_big{
-        display:none;
+/* navigation for large screen */
+     .large_nav li{
+         display:inline-block;
+         margin-left:40px;
+     }
+     .large_nav ul{
+         margin-left:40px;
+     }
+     .large_nav{
+         width: 65%;
+         float:right;
     }
+    .large_h1{
+        width:30%;
+        float:left;
+    }
+
+     .intro{
+         margin:auto;
+         max-width:90%;
+     }
+     .intro p{
+         width:65%;
+         line-height:1.5em;
+         font-size:1.5em;
+     }
+     .intro .profile_image{
+         width:30%;
+     }
+     .intro .profile_image{
+         float:right;
+     }
+     .intro p{
+         float:left;
+     }
+     .foot_h2{
+      
+         float:left;
+     }
+     .foot_nav{
+        
+        float:right;
+     }
+     .foot_nav li{
+         display:inline-block;
+     }
+     .foot_big{
+         padding-left:20px;
+         padding-right:20px;
+     }
+     /* CLEARFIX FOR MEDIA QUERY */
+     .clearfix::after{
+        content:" ";
+        clear:both;
+        display:table;
+    }
+    /* footer{
+        display:none;
+    } */
+     
 }
