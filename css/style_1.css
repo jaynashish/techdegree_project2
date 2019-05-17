@@ -1,4 +1,4 @@
-/*  BASE STYLES */
+/* Base styles */
 
 *{
     box-sizing:border-box;
@@ -6,6 +6,7 @@
 html, body {
     height: 100%;
   }
+
  body{
     background:#F3F0F0;
 }
@@ -14,9 +15,15 @@ header{
     padding:1em 0;
     margin:auto;
     width:100%;
-   
-    
 }
+header h1{
+    text-transform: uppercase;
+    text-align:center;
+    text-shadow: -0.5px 0 blue, 0 0.5px blue, 0.5px 0 blue, 0 -0.5px blue;
+   
+ }
+
+/* Navigation */
 nav ul{
     text-align:center;
     
@@ -39,30 +46,74 @@ nav a{
    max-width:90%;
    padding:20px;
    display:block;
-    margin:0 auto;
-    /* border:2px solid blue; */
-    text-align:center;
+   margin:0 auto;
+   text-align:center;
 }
+
+/* Introduction */
+
 .title{
     text-align:center;
     text-transform: uppercase;
     margin-bottom:50px;
 }
-.profile_image{
+ .profile_image{
     display:block;
     margin:auto;
     max-width:90%;
     box-shadow:  4px 4px 20px 4px lightblue;
+} 
+.intro p{
+    text-align:center;
 }
-/* THE FOOTER IN OFFICE HOURS */
+ .intro{
+     background:#CAF5F2;
+ }
+ /* Main Content */
+
+.portfolio{
+    background:#A8FAF3;
+    
+}
+
+.portfolio h2{
+    text-transform:uppercase;
+    text-align:center;
+}
+.portfolio p{
+    text-align:center;
+   
+}
+
+ .portfolio img{
+ display:block;
+ max-width:80%;
+ margin:auto;
+} 
+
+.main-content h2{
+    text-transform:uppercase;
+} 
+
+
+/* Contact Details */
+
+.lower-content h2{
+    text-align:center;
+    text-transform:uppercase;
+    font-size:1.5em;
+}
+.lower-content p{
+    text-align:center;
+    
+}
+/* THE FOOTER */
 footer {
-    position: absolute;
-    /* when I comment out position:absolute the footer disappers */
-    bottom: 0;
-    width: 100%;
+    
+    width: 100%; 
     height: 100px;
     padding: 20px;
-    background-color: #107896;
+    background-color: #8bccde;
   }
   footer h2 {
     float: left;
@@ -79,13 +130,13 @@ footer {
   .top, .footer-nav li:last-child {
     margin-right: 0;
   }
-  .full {
-    display: none;
-    /* I tried this also but .full items were unaffected */
+  .footer-nav .full {
+    display:none;
+  
   }
 
 footer a{
-    text-decoration: none;
+  text-decoration: none;
   color: white;
   text-transform: uppercase;
   line-height: 1.38em;
@@ -96,65 +147,64 @@ footer ul{
     padding-left:0;
 }
 
-header h1{
-    text-transform: uppercase;
-    text-align:center;
-    text-shadow: -0.5px 0 blue, 0 0.5px blue, 0.5px 0 blue, 0 -0.5px blue;
-   
- }
-
-
-.portfolio h2{
-    text-transform:uppercase;
-    text-align:center;
+ 
+/* Styling */
+.port1 img:hover{
+    box-shadow: 4px 4px 8px 10px lightblue;
 }
-.portfolio p{
-    text-align:center;
-   
+.port2 img:hover{
+    box-shadow: 4px 4px 8px 10px #E1AD4C;
 }
-.portfolio img{
- display:block;
- max-width:80%;
- margin:auto;
+.port3 img:hover{
+    box-shadow: 4px 4px 8px 10px #4186EF;
 }
-
-.main-content h2{
-    text-transform:uppercase;
-   
-} 
-
-
-footer span{
-    float:left;
+.port4 img:hover{
+    box-shadow: 4px 4px 8px 10px  #41EEE3;
 }
-footer a{
-    float:right;
+.port5 img:hover{
+    box-shadow: 4px 4px 8px 10px #AF6AF1;
+}
+.port6 img:hover{
+    box-shadow: 4px 4px 8px 10px #BAB8BD;
+}
+.portfolio h2:hover{
+    text-decoration:underline;
+}
+a{
     text-decoration:none;
+    color:black;
 }
-footer::after{
-    content: " ";
-    clear:both;
-    display:table;
-} 
-.portfolio img{
-    display:block;
-    max-width:80%;
-    margin:auto;
+a:hover{
+    text-decoration:underline;
+    color:blue;
 }
+.lower-content:hover,
+.intro:hover{
+    background:#A5F9BB;
+}
+.portfolio:hover{
+    background:#B2BD85;
+    border-radius: 20px;;
+}
+.title,
 .lower-content h2{
-    text-align:center;
-    text-transform:uppercase;
-    font-size:1.5em;
+    text-shadow: -0.5px 0 blue, 0 0.5px blue, 0.5px 0 blue, 0 -0.5px blue;
 }
-.lower-content p{
-    text-align:center;
-    
+p{font-size:1.3em;
 }
+.lower-content{
+    background:#CAF5F2;
+    border-radius:10px;
 
-
+}
+.lower-content a{
+    background:white;
+}
 /* MEDIA QUERIES */
 
-@media (min-width:769px) {
+@media (min-width:768px) {
+
+    /* Navigation */
     .large_nav li{
         display:inline-block;
         margin-left:20px;
@@ -170,6 +220,14 @@ footer::after{
        width:30%;
        float:left;
    }
+   /* Main content */
+   .portfolio{
+    width:44%;
+    float: left;
+    padding:1%;
+    margin:1%;
+}
+/* Introduction */
    .intro img{
        width:35%;
        float: right;
@@ -178,19 +236,22 @@ footer::after{
        width:58%;
        float:left;
        text-align:justify;
+       font-size:1.3em;
+       line-height:1.5;
 
    }
-    .portfolio{
-        width:46%;
-        float: left;
-        padding:1%;
-    }
    
     .intro{
         margin:auto;
         width:90%;
     }
-
+    /* Footer */
+    .footer-nav .top{
+        display:none;
+    }
+    .footer-nav .full{
+        display:inline-block;
+    }
     
     
     /* CLEARFIX FOR MEDIA QUERY */
@@ -199,19 +260,17 @@ footer::after{
         clear:both;
         display:table;
     } 
-    /* footer{
-        display:none;
-    } */
+}
 
 
 
 @media(min-width:1024px){
- 
-    
      .start{
          padding:0;
      }
-     
+
+     /* main content */
+
      .portfolio{
          width:30%;
          margin:auto;
@@ -220,9 +279,6 @@ footer::after{
          margin:1%;    
      }
      
-    
-
-
 /* navigation for large screen */
      .large_nav li{
          display:inline-block;
@@ -231,15 +287,15 @@ footer::after{
      .large_nav ul{
          margin-left:40px;
      }
-     .large_nav{
+      .large_nav{
          width: 65%;
          float:right;
     }
     .large_h1{
         width:30%;
         float:left;
-    }
-
+    } 
+/* Introduction */
      .intro{
          margin:auto;
          max-width:90%;
@@ -258,6 +314,7 @@ footer::after{
      .intro p{
          float:left;
      }
+     /* Footer */
      .foot_h2{
       
          float:left;
@@ -275,12 +332,8 @@ footer::after{
      }
      /* CLEARFIX FOR MEDIA QUERY */
      .clearfix::after{
-        content:" ";
+        content:"";
         clear:both;
         display:table;
     }
-    /* footer{
-        display:none;
-    } */
-     
 }
