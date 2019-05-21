@@ -1,0 +1,357 @@
+.portfolio{
+    margin-bottom:20px;
+}
+.header-container{
+    background:lightcyan;
+}
+.intro-container{
+    background:lightgoldenrodyellow;
+}
+.portfolio-container{
+    background:lightgray;
+}
+.contact-container{
+    background:lightskyblue;
+}
+.footer-container{
+    background:lightgray;
+}
+h1{
+    background:lightsalmon;
+}
+
+/* **************************MAIN STYLES/ MOBILE ******************** */
+*{
+    box-sizing:border-box;
+}
+html,
+body{
+    height:100%;
+}
+
+
+/****************** NAVIGATION ****************************/
+
+
+/* removing top margin, so there is no gap in header */
+ .header-container h1{
+    margin-top:0;
+    background:lightgrey; 
+    
+}
+/* Giving 100% width to header */
+ .header-container{
+    min-width:100%;
+    text-align:center;
+} 
+
+/* removing the list styles */
+ nav li{
+    list-style:none;  
+    background:lightgrey;  
+    margin-bottom:5px;
+} 
+
+/* removing underlines from achor tags*/
+nav a{
+    text-decoration:none;
+} 
+/* giving padding after checking the dev tools. */
+nav ul{
+    padding-right:40px; 
+} 
+/* ************************************ */
+
+/* *****************INTRODUCTION *************************/
+/* Centering of introduction center */
+.intro-container{
+    display:block;
+     width:90%;
+     margin: 0 auto;
+     border:4px solid red; 
+     margin-bottom:10px;
+}
+/* Centering of profile image , giving width property helps in aligning
+ the header container also */
+.intro-container img{
+    display:block;
+    width:80%;
+    margin:auto;
+}
+.intro-container p{
+    width:90%;
+    margin: auto;
+    text-align:center;
+}
+/* ************************************ */
+
+/****************** MAIN CONTENT ****************************/
+.portfolio img{
+    display:block;
+    width:80%;
+    margin:0 auto;
+    padding:1%;
+   
+}
+
+.portfolio-container,
+ .portfolio-container h2,
+.portfolio-conatiner p 
+{
+    width:90%;
+    margin:0 auto;
+    text-align:center;
+}
+.portfolio{
+   padding:1%;
+   margin:1%;
+  
+}
+.portfolio h2{
+    margin-top:20px;
+    text-transform:uppercase;
+    text-decoration:underline;
+}
+.portfolio-container h2{
+    text-transform: uppercase;
+    text-decoration:underline;
+}
+/* ************************************ */
+
+
+/****************** CONTACT ****************************/
+.contact-container{
+    width:90%;
+    margin:auto;
+    text-align:center;
+}
+/* ************************************ */
+
+/****************** FOOTER ****************************/
+/* Giving 100% width to footer */
+.footer-container{
+    min-width:100%;
+}
+/* finishing the bottom gap in footer */
+.footer-name{
+    margin-bottom:0;
+}
+/* footer. this is to make all the elements in straight line */
+footer,
+.footer-name,
+.footer-nav,
+.footer-nav li{
+    display:inline-block;
+}
+.footer-nav li{
+    margin-left:5px;
+}
+.footer-name{
+    margin-left:30px;
+}
+.footer-nav{
+    margin-left:150px;
+}
+.footer-nav .full{
+    display:none;
+}
+/* for removing the margin from the footer */
+.footer-nav{
+    margin-bottom:0px;
+}
+
+
+/* ************************************ */
+
+/* *****************MEDIA QUERIES (768)******************* */
+
+@media(min-width:768px) {
+    /* changing background color */
+    body{
+        background:lightpink;
+    }
+    /* Navigation */
+    nav li{
+        display:inline-block;
+        margin:10px;
+    
+    }
+    /* after converting to inline-block width can be applied */
+    nav li a{
+        display:inline-block;
+        width:100px;
+        /* background:white; */
+    }
+   
+    .intro-container,
+    .portfolio-container,
+    .portfolio-container h2,
+    .portfolio-conatiner p,
+    .contact-container {
+        margin:auto;
+        width:90%;
+        max-width:1000px;
+    }
+   .portfolio-container{
+       background:lightgrey;
+   }
+    
+/* giving floats property to introduction and profile image */
+.intro-container img{
+    width:38%;
+    float:right;
+}
+.intro-container p{
+    width:58%;
+    float:left;
+    text-align:justify;
+    font-size:1.5em;
+}
+.intro-container{
+    border:4px solid blue;
+    margin-bottom:50px;
+    margin-top:50px;
+}
+
+    .portfolio{
+        width:40%;
+        display:inline-block;
+        vertical-align:top;
+      
+    }
+    .portfolio-container{
+        max-width:1000px;
+    }
+    /* CLEARFIX for 768px*/
+    .clearfix::after{
+        content:"";
+        clear:both;
+        display:table;
+
+    }
+    /* .footer-container{
+        text-align:center;
+    } */
+    .footer-nav .top{
+        display:none;
+    }
+    .footer-nav .full{
+        display:inline-block;
+    }
+    .footer-nav{
+        margin-left:310px;
+      
+       
+        
+    }
+    .footer-nav li{
+        margin-left:20px;
+    }   
+}
+
+/* *****************MEDIA QUERIES (1024)******************* */
+
+@media(min-width:1024px) {
+    /* changing background color */
+
+    body{
+        background:white;
+    }
+    .header-container{
+        
+        min-width:100%;
+    
+    }
+    
+    .main-header,
+    .name,
+    nav,
+    .main-nav,
+    .main-nav li
+    {
+        display:inline; 
+       
+    }
+    .main-nav{
+        margin-left:38%;
+    }
+    .name{
+        margin-left:50px;
+     
+    }
+    .main-nav li{
+        display:inline;
+       
+        margin-left:10px;
+    }
+    .intro-container,
+    .portfolio-container,
+    .portfolio-container h2,
+    .portfolio-conatiner p,
+    .contact-container {
+             max-width:1100px;
+    }
+    .intro-container p{
+        line-height:1.5;
+    }
+    .portfolio{
+        width:30%;
+        display:inline-block;
+        vertical-align:top;
+    }
+    .portfolio-container{
+        background:lightsteelblue;
+    }
+.footer-container{
+    height:50px;
+    width:100%;
+   
+    
+}
+footer{
+  min-width:100%;
+}
+.footer-nav .top{
+    display:none;
+}
+/* ************** */
+.footer-container,
+footer,
+.footer-name,
+.footer-nav,
+.footer-nav .full{
+    display:inline-block;
+}
+.footer-nav{
+    /* margin-left:400px; */
+    margin-left:40%;
+    
+    
+   
+}
+.footer-nav li{
+    margin-left:30px;
+}
+.footer-name{
+    margin-left:70px;
+}
+.full a{
+    text-decoration:none;
+    text-transform:uppercase;
+    color:black;
+    background:grey
+}
+
+}
+
+
+     /* NAVIGATION this is to done all the elements in one line */
+
+.port1:hover,
+.port2:hover,
+.port3:hover,
+.port4:hover,
+.port5:hover,
+.port6:hover{
+    box-shadow:4px -4px 8px 10px grey;
+}
